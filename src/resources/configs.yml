@@ -1,0 +1,11 @@
+aws:
+  region: us-east-1
+  dynamodb:
+    table:  FundStock
+  sns:
+    arn: AQICAHjxMyRn8vOyn0btt0Tp9V1l+26GoXEFetSVl8KgHhc5ZAHnfroMimRmXaZH8s5KDSKDAAAAjzCBjAYJKoZIhvcNAQcGoH8wfQIBADB4BgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDPM0CPTP1O2x5w8xBgIBEIBLFn0MpxD/kNLFNVbLWfkbwMpiYzWtYb7+A4f/CVjRcSdPDF2FpkpSc1lUmWanuJIt38rTj+VWr2OGOvsPlaJMk6+9uWB8NDPgfHZK
+
+alphavantage:
+  endpoint: https://www.alphavantage.co
+  apikey: AQICAHjxMyRn8vOyn0btt0Tp9V1l+26GoXEFetSVl8KgHhc5ZAE0MOvo0k4lL/CeZzJDbfnuAAAAbzBtBgkqhkiG9w0BBwagYDBeAgEAMFkGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMBjAekYa5P2G3XsITAgEQgCwQ6FZ8o8Zmji9HyjC9nHILvWNs3QYEOWpbGzxPXWaH3djmVfJ6ImyI4tafhA==
+
