@@ -14,7 +14,9 @@ type Email struct {
 func generateStockPerformanceEmail(fundsQuotesPerformanceMap map[string][]Stock) Email{
 	const letter = `Funds Performance for `
 
-	currentDate := time.Now().Format("02 January 2006")
+	location, _ := time.LoadLocation("America/New_York")
+
+	currentDate := time.Now().In(location).Format("02 January 2006")
 
 	textHeader := letter + currentDate + "\n" + "\n"
 
