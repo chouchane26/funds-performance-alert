@@ -1,0 +1,41 @@
+name: Go
+
+on:
+  push:
+    branches: [ '*' ]
+  pull_request:
+    branches: [ '*' ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.15
+
+    - name: Build
+      run: |
+        ls -al
+        cd src
+        echo "<- Let's try this test ->"
+        GOARCH=amd64 GOOS=linux go build -o bin/main .
+        ls -la bin/
+
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: main-artifact
+        path: |
+          src/bin/
+
+    - name: Deploy
+      run: |
+        ls -la
+
+    - name: Test
+      run: go test -v ./...
