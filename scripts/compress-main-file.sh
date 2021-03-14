@@ -2,7 +2,7 @@
 
 mkdir ../deployment && cd ../deployment
 
-cp ../main && cp -r ../src/resources
+cp ../main . && cp -r ../src/resources .
 
 ls -la
 
