@@ -45,15 +45,6 @@ jobs:
 
       - shell: bash
         run: |
-          ls -la
-          ls -la src/
+          cd scripts
+          ls -al
 
-      #- shell: bash
-#      - name: Set up Go
-#        uses: actions/setup-go@v2
-#        with:
-#          go-version: 1.15
-
-      - name: Build
-        run: |
-          ls -la src/
