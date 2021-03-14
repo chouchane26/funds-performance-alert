@@ -7,7 +7,6 @@ on:
     branches: [ '*' ]
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
@@ -33,9 +32,16 @@ jobs:
         path: |
           src/bin/
 
-    - name: Deploy
-      run: |
-        ls -la
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
 
-    - name: Test
-      run: go test -v ./...
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.15
+
+      - name: Build
+        run: |
+          ls -la
