@@ -40,7 +40,9 @@ jobs:
       - name: Download math result for job 1
         uses: actions/download-artifact@v2
         with:
-          name: homework
+          name: main-artifact
+
+      - shell: bash
         run: |
           ls -la
           ls -la src/
