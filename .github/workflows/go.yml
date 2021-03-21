@@ -43,7 +43,7 @@ jobs:
         with:
           name: main-artifact
           env:
-            SUPER_SECRET: ${{secrets.DYNAMO_RESOURCE_ID}}}
+            SUPER_SECRET: ${{secrets.TEST}}}
       - shell: bash
 
         run: |
