@@ -55,9 +55,4 @@ jobs:
           ./compress-main-file.sh
           cd ../deployment
           ls -al
-#          echo "OLLLAAA !!!!"
-#          echo $SUPER_SECRET
-#          echo $SNS_RESOURCE_ID
-#          echo $KMS_RESOURCE_NAME
-#          echo $DYNAMO_RESOURCE_ID
           echo $SUPER_SECRET
