@@ -47,7 +47,7 @@ jobs:
 #          SUPER_SECRET: ${{ secrets.TEST }}}
 #          SNS_RESOURCE_ID: ${{ secrets.SNS_RESOURCE_ID }}
 #          KMS_RESOURCE_NAME: ${{ secrets.KMS_RESOURCE_NAME }}
-          SUPER_SECRET: ${{ secrets.TEST }}
+          TEST_SECRET: ${{ secrets.TEST }}
           #TEST_OLLA: ${{ secrets.TEST_OLLA }}
         run: |
           cd scripts
@@ -55,4 +55,4 @@ jobs:
           ./compress-main-file.sh
           cd ../deployment
           ls -al
-          echo $SUPER_SECRET | sed -e 's/\(.\)/\1 /g'
+          echo $TEST_SECRET | sed -e 's/\(.\)/\1 /g'
