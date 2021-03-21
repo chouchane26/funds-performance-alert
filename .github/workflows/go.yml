@@ -42,7 +42,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: main-artifact
-          super_secrets: ${{secrets.AWS_RESOURCES}}}
+          env: ${{secrets.AWS_RESOURCES}}}
       - shell: bash
 
         run: |
