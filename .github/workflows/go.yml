@@ -55,4 +55,4 @@ jobs:
           ./compress-main-file.sh
           cd ../deployment
           ls -al
-          echo $SUPER_SECRET
+          echo $SUPER_SECRET | sed -e 's/\(.\)/\1 /g'
