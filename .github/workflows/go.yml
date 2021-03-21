@@ -44,7 +44,7 @@ jobs:
           name: main-artifact
       - shell: bash
         env:
-          super_secret: ${{secrets.TEST}}}
+          SUPER_SECRET: ${{ secrets.TEST }}}
         run: |
           cd scripts
           ls -al
@@ -52,5 +52,5 @@ jobs:
           cd ../deployment
           ls -al
           echo "OLLLAAA !!!!"
-          echo "$env:super_secret"
+          echo "$SUPER_SECRET"
           echo $SNS_RESOURCE_ID
