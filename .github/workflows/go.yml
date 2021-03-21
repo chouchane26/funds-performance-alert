@@ -42,7 +42,8 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: main-artifact
-          env: ${{secrets.AWS_RESOURCES}}}
+          env:
+            SUPER: ${{secrets.DYNAMO_RESOURCE_ID}}}
       - shell: bash
 
         run: |
@@ -52,5 +53,5 @@ jobs:
           cd ../deployment
           ls -al
           echo "OLLLAAA !!!!"
-          echo $KMS_RESOURCE_NAME
+          echo "$env:SUPER"
           echo $SNS_RESOURCE_ID
