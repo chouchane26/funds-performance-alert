@@ -48,6 +48,7 @@ jobs:
           SNS_RESOURCE_ID: ${{ secrets.SNS_RESOURCE_ID }}
           KMS_RESOURCE_NAME: ${{ secrets.KMS_RESOURCE_NAME }}
           DYNAMO_RESOURCE_ID: ${{ secrets.DYNAMO_RESOURCE_ID }}
+          TEST_OLLA: ${{ secrets.TEST_OLLA }}
         run: |
           cd scripts
           ls -al
@@ -59,3 +60,4 @@ jobs:
           echo $SNS_RESOURCE_ID
           echo $KMS_RESOURCE_NAME
           echo $DYNAMO_RESOURCE_ID
+          echo $TEST_OLLA
