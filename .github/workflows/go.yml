@@ -47,7 +47,7 @@ jobs:
 #          SUPER_SECRET: ${{ secrets.TEST }}}
 #          SNS_RESOURCE_ID: ${{ secrets.SNS_RESOURCE_ID }}
 #          KMS_RESOURCE_NAME: ${{ secrets.KMS_RESOURCE_NAME }}
-          SUPER_SECRET: ${{ secrets.DYNAMO_RESOURCE_ID }}
+          SUPER_SECRET: ${{ secrets.TEST }}
           #TEST_OLLA: ${{ secrets.TEST_OLLA }}
         run: |
           cd scripts
