@@ -42,10 +42,9 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: main-artifact
-          env:
-            super_secret: ${{secrets.TEST}}}
       - shell: bash
-
+        env:
+          super_secret: ${{secrets.TEST}}}
         run: |
           cd scripts
           ls -al
