@@ -44,6 +44,8 @@ jobs:
           name: main-artifact
 
       - shell: bash
+        with:
+          super_secrets: ${{secrets.AWS_RESOURCES}}}
         run: |
           cd scripts
           ls -al
