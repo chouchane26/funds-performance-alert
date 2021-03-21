@@ -44,20 +44,20 @@ jobs:
           name: main-artifact
       - shell: bash
         env:
-          SUPER_SECRET: ${{ secrets.TEST }}}
-          SNS_RESOURCE_ID: ${{ secrets.SNS_RESOURCE_ID }}
-          KMS_RESOURCE_NAME: ${{ secrets.KMS_RESOURCE_NAME }}
-          DYNAMO_RESOURCE_ID: ${{ secrets.DYNAMO_RESOURCE_ID }}
-          TEST_OLLA: ${{ secrets.TEST_OLLA }}
+#          SUPER_SECRET: ${{ secrets.TEST }}}
+#          SNS_RESOURCE_ID: ${{ secrets.SNS_RESOURCE_ID }}
+#          KMS_RESOURCE_NAME: ${{ secrets.KMS_RESOURCE_NAME }}
+          SUPER_SECRET: ${{ secrets.DYNAMO_RESOURCE_ID }}
+          #TEST_OLLA: ${{ secrets.TEST_OLLA }}
         run: |
           cd scripts
           ls -al
           ./compress-main-file.sh
           cd ../deployment
           ls -al
-          echo "OLLLAAA !!!!"
+#          echo "OLLLAAA !!!!"
+#          echo $SUPER_SECRET
+#          echo $SNS_RESOURCE_ID
+#          echo $KMS_RESOURCE_NAME
+#          echo $DYNAMO_RESOURCE_ID
           echo $SUPER_SECRET
-          echo $SNS_RESOURCE_ID
-          echo $KMS_RESOURCE_NAME
-          echo $DYNAMO_RESOURCE_ID
-          echo $TEST_OLLA
