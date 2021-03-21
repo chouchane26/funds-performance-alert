@@ -52,5 +52,5 @@ jobs:
           cd ../deployment
           ls -al
           echo "OLLLAAA !!!!"
-          echo "$SUPER_SECRET"
+          echo $SUPER_SECRET
           echo $SNS_RESOURCE_ID
