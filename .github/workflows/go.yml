@@ -45,6 +45,9 @@ jobs:
       - shell: bash
         env:
           SUPER_SECRET: ${{ secrets.TEST }}}
+          SNS_RESOURCE_ID: ${{ secrets.SNS_RESOURCE_ID }}
+          KMS_RESOURCE_NAME: ${{ secrets.KMS_RESOURCE_NAME }}
+          DYNAMO_RESOURCE_ID: ${{ secrets.DYNAMO_RESOURCE_ID }}
         run: |
           cd scripts
           ls -al
@@ -54,3 +57,5 @@ jobs:
           echo "OLLLAAA !!!!"
           echo $SUPER_SECRET
           echo $SNS_RESOURCE_ID
+          echo $KMS_RESOURCE_NAME
+          echo $DYNAMO_RESOURCE_ID
