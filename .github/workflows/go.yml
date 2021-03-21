@@ -42,10 +42,9 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: main-artifact
-
-      - shell: bash
-        with:
           super_secrets: ${{secrets.AWS_RESOURCES}}}
+      - shell: bash
+
         run: |
           cd scripts
           ls -al
