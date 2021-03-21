@@ -50,3 +50,6 @@ jobs:
           ./compress-main-file.sh
           cd ../deployment
           ls -al
+          echo $DYNAMO_RESOURCE_ID
+          echo $KMS_RESOURCE_NAME
+          echo $SNS_RESOURCE_ID
