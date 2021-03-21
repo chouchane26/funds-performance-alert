@@ -43,7 +43,7 @@ jobs:
         with:
           name: main-artifact
           env:
-            SUPER: ${{secrets.DYNAMO_RESOURCE_ID}}}
+            SUPER_SECRET: ${{secrets.DYNAMO_RESOURCE_ID}}}
       - shell: bash
 
         run: |
@@ -53,5 +53,5 @@ jobs:
           cd ../deployment
           ls -al
           echo "OLLLAAA !!!!"
-          echo "$env:SUPER"
+          echo "$env:SUPER_SECRET"
           echo $SNS_RESOURCE_ID
