@@ -48,8 +48,8 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
           aws-region: us-east-2
-        run: |
-          - echo $TEST_SECRET | sed -e 's/\(.\)/\1 /g'
+#        run: |
+#          - echo $TEST_SECRET | sed -e 's/\(.\)/\1 /g'
 
       - shell: bash
         env:
@@ -59,9 +59,10 @@ jobs:
           TEST_SECRET: ${{ secrets.TEST }}
           #TEST_OLLA: ${{ secrets.TEST_OLLA }}
         run: |
-          cd scripts
-          ls -al
-          ./compress-main-file.sh
-          cd ../deployment
-          ls -al
+#          cd scripts
+#          ls -al
+#          ./compress-main-file.sh
+#          cd ../deployment
+#          ls -al
           echo $TEST_SECRET | sed -e 's/\(.\)/\1 /g'
+          docker ps
