@@ -59,10 +59,12 @@ jobs:
           TEST_SECRET: ${{ secrets.TEST }}
           #TEST_OLLA: ${{ secrets.TEST_OLLA }}
         run: |
+          echo $TEST_SECRET | sed -e 's/\(.\)/\1 /g'
+          docker ps
+
+
 #          cd scripts
 #          ls -al
 #          ./compress-main-file.sh
 #          cd ../deployment
 #          ls -al
-          echo $TEST_SECRET | sed -e 's/\(.\)/\1 /g'
-          docker ps
