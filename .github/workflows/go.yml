@@ -42,6 +42,13 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: main-artifact
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: "qwewqeqw"
+          aws-secret-access-key: "qeqweqw"
+          aws-region: us-east-2
+
       - shell: bash
         env:
 #          SUPER_SECRET: ${{ secrets.TEST }}}
